@@ -1,0 +1,18 @@
+Import-Module posh-git
+Import-Module oh-my-posh
+#Set-PoshPrompt powerlevel10k_rainbow
+#Set-PoshPrompt paradox
+$env:POSH_GIT_ENABLED = $true
+Set-PoshPrompt paradoxgig
+Set-Alias -Name k kubectl
+Set-Alias -Name d docker
+Set-Alias -Name dc docker-compose
+Set-Alias -Name kc kubectxwin
+Set-Alias -Name kn kubenswin
+function func_gitrepo { set-location "C:\gitrepo" }
+Set-Alias -Name gitrepo func_gitrepo
+#Function _dockerps_ {"docker ps --all --format table {{.Names}}\t{{.Status}}\t{{.Image}}\t{{.Command}}"}
+
+#Set-Alias -Name dockerps -Value _dockerps_
+#alias dockerrmall="docker rm -f $(docker ps -a -q)"
+#alias dockerremoveallimages="docker rmi $(docker images -a -q)"
